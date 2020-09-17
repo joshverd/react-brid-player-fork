@@ -18,6 +18,8 @@ class ReactBridPlayer extends Component {
     };
     (this.props.video) ? this.playerConfig.video = this.props.video : this.playerConfig.playlist = this.props.playlist;
     this.state = { ready: "false", div: {} };
+
+    this.initialize = this.initialize.bind(this);
   }
 
   componentDidMount() {
