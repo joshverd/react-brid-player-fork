@@ -8,20 +8,23 @@ const displayName = "ReactBridPlayer";
 class ReactBridPlayer extends Component {
   constructor(props) {
     super(props);
+
     this.scriptSrc = "//services.brid.tv/player/build/brid.min.js";
     this.uniqueScriptId = "brid-player-script";
+
     this.playerConfig = {
       id: this.props.id,
       width: this.props.width,
       height: this.props.height,
       stats: {"rj" : 1}
     };
+
     (this.props.video) ? this.playerConfig.video = this.props.video : this.playerConfig.playlist = this.props.playlist;
+
     this.state = { ready: "false", div: {} };
 
     this.initialize = this.initialize.bind(this);
   }
-
   componentDidMount() {
     injectPlayerScript({
       context: document,
@@ -30,11 +33,9 @@ class ReactBridPlayer extends Component {
       uniqueScriptId: this.uniqueScriptId
     });
   }
-
   componentWillUnmount() {
     removeBridPlayerInstance(this.props.divId, window);
   }
-
   initialize() {
     const player = window.$bp(this.props.divId, this.playerConfig);
     this.setState({ ready: true, div: player });
@@ -46,7 +47,10 @@ class ReactBridPlayer extends Component {
     return (
       <div
         id={this.props.divId}
-        className="brid"
+        className={[
+          props.className || '',
+          "brid",
+        ].join(' ')}
         style={{ width: this.props.width, height: this.props.height }}
       />
     );
@@ -54,4 +58,5 @@ class ReactBridPlayer extends Component {
 }
 
 ReactBridPlayer.displayName = displayName;
+
 export default ReactBridPlayer;
