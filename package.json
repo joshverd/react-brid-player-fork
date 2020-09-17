@@ -1,0 +1,22 @@
+{
+  "name": "react-brid-player-fork",
+  "version": "1.0.0",
+  "description": "A fork of react-brid-player",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshverd/react-brid-player-fork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshverd/react-brid-player-fork/issues"
+  },
+  "homepage": "https://github.com/joshverd/react-brid-player-fork#readme",
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}
