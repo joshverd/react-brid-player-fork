@@ -48,7 +48,7 @@ class ReactBridPlayer extends Component {
       <div
         id={this.props.divId}
         className={[
-          props.className || '',
+          this.props.className || '',
           "brid",
         ].join(' ')}
         style={{ width: this.props.width, height: this.props.height }}
