@@ -41,7 +41,7 @@ class ReactBridPlayer extends Component {
     const player = window.$bp(this.props.divId, this.playerConfig);
     this.setState({ ready: true, div: player });
     window.$bp(this.props.divId, this.playerConfig);
-    this.eventHandlers = createEventHandlers(this, window.$bp);
+    this.eventHandlers = createEventHandlers.bind(this)(this, window.$bp);
 
     this.props.onPlayerInit();
   }
