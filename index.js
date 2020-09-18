@@ -16,7 +16,8 @@ class ReactBridPlayer extends Component {
       id: this.props.id,
       width: this.props.width,
       height: this.props.height,
-      stats: {"rj" : 1}
+      stats: {"rj" : 1},
+      autoplay: true,
     };
 
     (this.props.video) ? this.playerConfig.video = this.props.video : this.playerConfig.playlist = this.props.playlist;
@@ -41,12 +42,15 @@ class ReactBridPlayer extends Component {
     this.setState({ ready: true, div: player });
     window.$bp(this.props.divId, this.playerConfig);
     this.eventHandlers = createEventHandlers(this, window.$bp);
+
+    this.props.onPlayerInit();
   }
 
   render() {
     return (
       <div
         id={this.props.divId}
+
         className={[
           this.props.className || '',
           "brid",
