@@ -19,7 +19,9 @@ import {
   onSkipped,
   onPlaylistComplete,
   onFullScreen,
-  onMuteChange
+  onMuteChange,
+  onAdSkip,
+  onAdComplete,
 } from "./EventListeners";
 
 function createEventHandlers(component, config) {
@@ -27,11 +29,12 @@ function createEventHandlers(component, config) {
     onRequestAd: config(component.props.divId).add("requestAd", onRequestAd.bind(this)),
     onAdStart: config(component.props.divId).add("adStart", onAdStart.bind(this)),
     onAdImpression: config(component.props.divId).add("adImpression", onAdImpression.bind(this)),
-    onAdSkip: config(component.props.divId).add("adSkip", onAdStart.bind(this)),
+    onAdSkip: config(component.props.divId).add("adSkip", onAdSkip.bind(this)),
     onAdFirstQuartile: config(component.props.divId).add("adFirstQuartile", onAdFirstQuartile.bind(this)),
     onAdMidpoint: config(component.props.divId).add("adMidpoint", onAdMidpoint.bind(this)),
     onAdThirdQuartile: config(component.props.divId).add("adThirdQuartile", onAdThirdQuartile.bind(this)),
     onAdEnd: config(component.props.divId).add("adEnd", onAdEnd.bind(this)),
+    onAdComplete: config(component.props.divId).add("adComplete", onAdComplete.bind(this)),
     onAdError: config(component.props.divId).add("adError", onAdError.bind(this)),
     onAdPause: config(component.props.divId).add("adPause", onAdPause.bind(this)),
     onAdResume: config(component.props.divId).add("adResume", onAdResume.bind(this)),

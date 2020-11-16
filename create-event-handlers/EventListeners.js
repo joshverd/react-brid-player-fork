@@ -61,6 +61,12 @@ function onFullScreen(event) {
 function onMuteChange(event) {
   this.props.onMuteChange(event);
 }
+function onAdSkip(event) {
+  this.props.onAdSkip(event);
+}
+function onAdComplete(event) {
+  this.props.onAdComplete(event);
+}
 
 export {
   onRequestAd,
@@ -83,5 +89,7 @@ export {
   onSkipped,
   onPlaylistComplete,
   onFullScreen,
-  onMuteChange
-};
+  onMuteChange,
+  onAdSkip,
+  onAdComplete,
+}
