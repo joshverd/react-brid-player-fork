@@ -27,6 +27,7 @@ function createEventHandlers(component, config) {
     onRequestAd: config(component.props.divId).add("requestAd", onRequestAd.bind(this)),
     onAdStart: config(component.props.divId).add("adStart", onAdStart.bind(this)),
     onAdImpression: config(component.props.divId).add("adImpression", onAdImpression.bind(this)),
+    onAdSkip: config(component.props.divId).add("adSkip", onAdStart.bind(this)),
     onAdFirstQuartile: config(component.props.divId).add("adFirstQuartile", onAdFirstQuartile.bind(this)),
     onAdMidpoint: config(component.props.divId).add("adMidpoint", onAdMidpoint.bind(this)),
     onAdThirdQuartile: config(component.props.divId).add("adThirdQuartile", onAdThirdQuartile.bind(this)),
