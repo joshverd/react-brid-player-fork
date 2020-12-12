@@ -68,6 +68,10 @@ function onAdComplete(event) {
   this.props.onAdComplete(event);
 }
 
+function seeked(event) {
+  this.props.seeked(event);
+}
+
 export {
   onRequestAd,
   onAdStart,
@@ -92,4 +96,5 @@ export {
   onMuteChange,
   onAdSkip,
   onAdComplete,
+  seeked,
 }
