@@ -49,8 +49,8 @@ function createEventHandlers(component, config) {
     onSkipped: config(component.props.divId).add("skipped", onSkipped.bind(this)),
     onPlaylistComplete: config(component.props.divId).add("playlistComplete", onPlaylistComplete.bind(this)),
     onFullScreen: config(component.props.divId).add("fullscreenchange", onFullScreen.bind(this)),
-    onMuteChange: config(component.props.divId).add("mutechange", onMuteChange),
-    seeked: config(component.props.divId).add("seeked", seeked),
+    onMuteChange: config(component.props.divId).add("mutechange", onMuteChange.bind(this)),
+    seeked: config(component.props.divId).add("seeked", seeked.bind(this)),
   };
 }
 

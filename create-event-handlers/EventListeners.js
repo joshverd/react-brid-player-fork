@@ -67,7 +67,6 @@ function onAdSkip(event) {
 function onAdComplete(event) {
   this.props.onAdComplete(event);
 }
-
 function seeked(event) {
   this.props.seeked(event);
 }
