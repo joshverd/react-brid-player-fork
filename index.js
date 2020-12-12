@@ -18,6 +18,8 @@ class ReactBridPlayer extends Component {
       height: this.props.height,
       stats: {"rj" : 1},
       autoplay: true,
+      pauseOffView: true,
+      pauseAdOffView: true,
     };
 
     (this.props.video) ? this.playerConfig.video = this.props.video : this.playerConfig.playlist = this.props.playlist;
