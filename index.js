@@ -41,6 +41,10 @@ class ReactBridPlayer extends Component {
   }
   initialize() {
     const player = window.$bp(this.props.divId, this.playerConfig);
+
+    // Set the video quality to 480p by default
+    player.setVideoSource('hsd');
+
     this.setState({ ready: true, div: player });
     window.$bp(this.props.divId, this.playerConfig);
     this.eventHandlers = createEventHandlers.bind(this)(this, window.$bp);
