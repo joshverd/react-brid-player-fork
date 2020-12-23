@@ -1,6 +1,6 @@
 {
   "name": "react-brid-player-fork",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A fork of react-brid-player",
   "main": "index.js",
   "scripts": {
