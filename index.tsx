@@ -73,7 +73,7 @@ const ReactBridPlayer = (props: ReactBridPlayerProps) => {
   useEffect(() => {
     playerUtils.injectPlayerScript({
       onLoadCallback: onPlayerLoad,
-      scriptSrc: 'services.brid.tv/player/build/brid.min.js',
+      scriptSrc: 'https://services.brid.tv/player/build/brid.min.js',
       uniqueScriptID: uniqueScriptID,
     });
 
