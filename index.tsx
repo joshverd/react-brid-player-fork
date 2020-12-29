@@ -6,9 +6,9 @@ import playerUtils from './utils/player';
 import eventsUtils from './utils/events';
 
 // Types
-import type BridPlayerConfig from 'types/BridPlayerConfig';
-import type EventFunctions from 'types/EventFunctions';
-import type BridPlayer from 'types/BridPlayer';
+import type BridPlayerConfig from './types/BridPlayerConfig';
+import type EventFunctions from './types/EventFunctions';
+import type BridPlayer from './types/BridPlayer';
 
 type ReactBridPlayerProps = {
   divID: string,
@@ -33,8 +33,6 @@ type ReactBridPlayerProps = {
 }
 
 const ReactBridPlayer = (props: ReactBridPlayerProps) => {
-  if(props.videoID === undefined && props.playlistID === undefined) throw 'videoID or playlistID must be defined';
-
   const [config, setConfig] = useState<BridPlayerConfig>({
     id: props.divID,
     // No idea what this does, brid docs don't help
@@ -82,7 +80,7 @@ const ReactBridPlayer = (props: ReactBridPlayerProps) => {
       playerUtils.removeBridPlayerInstance(uniqueScriptID);
     };
   }, []);
-
+  
   return (
     <div
       id={props.divID}

@@ -1,6 +1,3 @@
-// Types
-import type EventFunctions from 'types/EventFunctions';
-
 // Mapping our event names to the brid function
 //
 // Functions from: https https://developer.brid.tv/brid-player/javascript-api-reference/javascript-events#playback

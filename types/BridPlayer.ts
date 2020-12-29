@@ -2,7 +2,7 @@
 import EventNameToBridEventName from '../constants/EventNameToBridEventName';
 
 // Types
-import type EventFunction from 'types/EventFunction';
+import type EventFunction from './EventFunction';
 
 // This is obviously not all the types on the brid player object
 type BridPlayer = {

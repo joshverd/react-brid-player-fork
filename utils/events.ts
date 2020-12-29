@@ -2,8 +2,8 @@
 import EventNameToBridEventName from '../constants/EventNameToBridEventName';
 
 // Types
-import type EventFunctions from 'types/EventFunctions';
-import type BridPlayer from 'types/BridPlayer';
+import type EventFunctions from '../types/EventFunctions';
+import type BridPlayer from '../types/BridPlayer';
 
 export default {
   setupEventFunctions,

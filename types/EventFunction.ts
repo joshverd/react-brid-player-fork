@@ -1,5 +1,5 @@
 // Types
-import PlayerEvent from 'types/PlayerEvent';
+import PlayerEvent from './PlayerEvent';
 
 type EventFunction = (event: PlayerEvent) => void;
 

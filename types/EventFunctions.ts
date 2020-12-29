@@ -1,5 +1,5 @@
 // Types
-import type EventFunction from 'types/EventFunction';
+import type EventFunction from './EventFunction';
 
 // Functions found here: https://developer.brid.tv/brid-player/javascript-api-reference/javascript-events#playback
 type EventFunctions = {
