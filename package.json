@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshverd/react-brid-player-fork.git"
+    "url": "git+https://github.com/joshverd/react-brid-player-typescript.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/joshverd/react-brid-player-fork/issues"
+    "url": "https://github.com/joshverd/react-brid-player-typescript/issues"
   },
-  "homepage": "https://github.com/joshverd/react-brid-player-fork#readme",
+  "homepage": "https://github.com/joshverd/react-brid-player-typescript#readme",
   "dependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
