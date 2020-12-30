@@ -11,6 +11,7 @@ type BridPlayerConfig = {
   height?: string,
   video?: string,
   playlist?: string,
+  monetize?: boolean,
 }
 
 export default BridPlayerConfig;

@@ -34,7 +34,7 @@ type ReactBridPlayerProps = {
 
 const ReactBridPlayer = (props: ReactBridPlayerProps) => {
   const [config, setConfig] = useState<BridPlayerConfig>({
-    id: props.divID,
+    id: props.bridPlayerID,
     // No idea what this does, brid docs don't help
     stats: {
       rs: 1,
@@ -80,7 +80,7 @@ const ReactBridPlayer = (props: ReactBridPlayerProps) => {
       playerUtils.removeBridPlayerInstance(uniqueScriptID);
     };
   }, []);
-  
+
   return (
     <div
       id={props.divID}
