@@ -52,19 +52,22 @@ const ReactBridPlayer = (props: ReactBridPlayerProps) => {
 
   // Once player script is loaded
   const onPlayerLoad = () => {
-    // Get the player
-    const player: BridPlayer = window.$bp(props.divID, config);
+    // Initiate the player and run the setup in the callback function
+    window.$bp(props.divID, config, () => {
+      // Get the player we just created
+      const player: BridPlayer = window.$bp(props.divID);
 
-    // Setup the handler functions if they are specified
-    if(props.eventHandlers) {
-      eventsUtils.setupEventFunctions({
-        eventHandlers: props.eventHandlers,
-        player,
-      });
-    }
+      // Setup the handler functions if they are specified
+      if(props.eventHandlers) {
+        eventsUtils.setupEventFunctions({
+          eventHandlers: props.eventHandlers,
+          player,
+        });
+      }
 
-    // Run the ready function if specified
-    if(props.onPlayerInit) props.onPlayerInit();
+      // Run the ready function if specified
+      if(props.onPlayerInit) props.onPlayerInit();
+    });
   }
 
   // On load, inject the brid player script
