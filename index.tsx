@@ -77,7 +77,7 @@ const ReactBridPlayer = (props: ReactBridPlayerProps) => {
 
     // On unload, remove the player instance
     return () => {
-      playerUtils.removeBridPlayerInstance(uniqueScriptID);
+      playerUtils.removeBridPlayerInstance(props.divID);
     };
   }, []);
 
