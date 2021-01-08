@@ -24,7 +24,7 @@ type ReactBridPlayerProps = {
   // Pause ad when user tabs out?
   pauseAdOffView?: boolean,
   // When the player is initialized, run this function
-  onPlayerInit?: () => void,
+  onPlayerInit?: (player: BridPlayer) => void,
   // The ID of the video this player is showing
   videoID?: string,
   // The ID of the playlist this player is showing
@@ -66,7 +66,7 @@ const ReactBridPlayer = (props: ReactBridPlayerProps) => {
       }
 
       // Run the ready function if specified
-      if(props.onPlayerInit) props.onPlayerInit();
+      if(props.onPlayerInit) props.onPlayerInit(player);
     });
   }
 
